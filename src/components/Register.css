@@ -10,3 +10,21 @@
     border: 1px solid gray;
     border-radius: 20px;
 }
+
+.App-Register-Table{
+    /* border: 1px solid gray; */
+    margin: 5px;
+}
+.App-Register-Table td{
+    border: 1px solid gray;
+    padding: 5px;
+    margin:0px;
+}
+
+.App-Register-Table th{
+    border: 1px solid gray;
+    padding: 5px;
+    margin:0px;
+    background-color: gray;
+    color: white;
+}
