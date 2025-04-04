@@ -1,0 +1,31 @@
+.Login-container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(106, 106, 107);
+}
+.Login-Box{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: white;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+.Login-Box div input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+.Login-Box div button{
+    width: 255px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 0px solid silver;
+    color: white;
+    background-color:rgb(59, 79, 114);
+    font-size: large;
+}

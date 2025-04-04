@@ -1,10 +1,16 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext,useEffect, useState } from "react";
 import { appContext } from "../App";
+import Orders from "./Orders";
 export default function Header() {
-  const { user, setUser, cart, products } = useContext(appContext);
+  const { user, setUser, cart, products,orders } = useContext(appContext);
   const items = products.filter((value) => cart[value.id] > 0);
+  const [myOrder, setMyOrder] = useState([]);
+  useEffect(() => {
+    const found = orders.filter((value) => value.email === user.email);
+    setMyOrder(found.length);
+  }, [orders]);
   return (
     <div className="App-Header-Row">
       <h1>My React Store</h1>
@@ -15,6 +21,11 @@ export default function Header() {
         <Link to="cart" className="App-Header-Link">
           Cart({items.length})
         </Link>
+        {orders.find((value) => value.email === user.email) && (
+          <Link to="orders" className="App-Header-Link">
+            Orders({myOrder})
+          </Link>
+        )}
         {user.email === "" ? (
           <Link to="login" className="App-Header-Link">
             Login

@@ -2,11 +2,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: rgb(4, 160, 165);
+    padding: 15px;
 }
 .App-Products-Box{
-    margin: 5px;
-    padding: 5px;
+    margin: 14px;
+    padding: 10px;
     border: 1px solid gray;
     border-radius: 10px;
-    width: 300px;
+    width: 320px;
+    background-color: white;
 }

@@ -1,10 +1,11 @@
 import React from "react";
+import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useRef, useContext } from "react";
 import { appContext } from "../App";
-import "./Register.css";
 export default function Register() {
-  const { users, setUsers, user, setUser } = useContext(appContext);
+
+   const { users, setUsers, user, setUser } = useContext(appContext);
   const [msg, setMsg] = useState();
   const msgRef = useRef();
   const Navigate = useNavigate()
@@ -23,11 +24,15 @@ export default function Register() {
   const handleDelete = (email) => {
     setUsers(users.filter((value) => value.email != email));
   };
+
   return (
-    <div className="App-Register-Row">
-      <div className="App-Register-Box">
-        <h3>Registration Form</h3>
-        <p ref={msgRef}>{msg}</p>
+    <div className="Register-container">
+      <div className="Register-Box">
+        <div>
+          <h1>Register</h1>
+          <p ref={msgRef}>{msg}</p>
+        </div>
+        <div>
         <p>
           <input
             type="text"
@@ -58,28 +63,31 @@ export default function Register() {
         <p>
           <Link to="../login">Already a member? Login here!</Link>
         </p>
+        </div>
       </div>
-      <div className="App-Register-Box">
-        <h3>Userlist</h3>
-        <table className="App-Register-Table">
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th></th>
-          </tr>
-          {users.map((value, index) => (
-            <tr key={index}>
-              <td>{value.name}</td>
-              <td>{value.email}</td>
-              <td>{value.password}</td>
-              <td>
-                <button onClick={() => handleDelete(value.email)}>
-                  Delete
-                </button>
-              </td>
+      <div className="Register-Box2">
+        <h2>User List</h2>
+        <table className="App-Register-Tab">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Action</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {users.map((value, index) => (
+              <tr key={index}>
+                <td>{value.name}</td>
+                <td>{value.email}</td>
+                <td>{value.password}</td>
+                <td>
+                  <button onClick={() => handleDelete(value.email)}>X</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

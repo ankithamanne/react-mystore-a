@@ -1,30 +1,66 @@
-.App-Register-Row{
+.Register-container{
+    /* color: white; */
+    padding: 10px;
     display: flex;
     justify-content: center;
-    margin: 20px;
-    padding: 20px;
+    background-color: rgb(59, 79, 114);
 }
-.App-Register-Box{
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid gray;
-    border-radius: 20px;
+.Register-Box{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background-color: white;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
 }
-
-.App-Register-Table{
-    /* border: 1px solid gray; */
-    margin: 5px;
+.Register-Box div input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid silver;
 }
-.App-Register-Table td{
-    border: 1px solid gray;
-    padding: 5px;
-    margin:0px;
-}
-
-.App-Register-Table th{
-    border: 1px solid gray;
-    padding: 5px;
-    margin:0px;
-    background-color: gray;
+.Register-Box div button{
     color: white;
+    width: 255px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: large;
+    border: 0px solid silver;
+    background-color:rgb(59, 79, 114);
+}
+p a{
+    text-decoration: none;
+    color: black;
+}
+.Register-Box2{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.Register-Box2 button {
+    background-color:rgb(59, 79, 114);
+    color: white;
+    border-radius: 5px;
+}
+
+.App-Register-Tab td{
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    margin:0px;
+    
+}
+.App-Register-Tab th{
+    border: 1px solid gray;
+    background-color:rgb(59, 79, 114);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+
 }
